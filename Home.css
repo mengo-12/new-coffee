@@ -1,0 +1,315 @@
+   * {
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+   }
+
+   body {
+       background-image: url('assets/background.png');
+       background-size: cover;
+       background-position: center;
+       background-repeat: no-repeat;
+       min-height: 100vh;
+       font-family: Arial, sans-serif;
+       color: #333;
+   }
+
+
+   .content-box {
+       width: 100%;
+       background-color: white;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       padding: 40px 60px;
+       gap: 40px;
+       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+       border-bottom: 2px solid #ccc;
+   }
+
+   .content-box img {
+       width: 350px;
+       border-radius: 10px;
+       object-fit: cover;
+   }
+
+   .text-content {
+       max-width: 600px;
+   }
+
+   .text-content h1 {
+       font-size: 36px;
+       margin-bottom: 20px;
+       color: #333;
+       text-align: center;
+   }
+
+   .text-content p {
+       font-size: 18px;
+       color: #555;
+       text-align: center;
+       line-height: 1.6;
+   }
+
+   .full-width-box.our-selection {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       text-align: center;
+   }
+
+
+   .full-width-box h2 {
+       font-size: 32px;
+       font-weight: bold;
+       margin-bottom: 30px;
+       font-family: inherit;
+       color: #333;
+   }
+
+
+   .full-width-box.our-selection {
+       position: relative;
+   }
+
+   .full-width-box.our-selection .arrow-btn {
+       top: 55%;
+       /* خليه قريب من منتصف السلايدر */
+       transform: translateY(-50%);
+   }
+
+
+   .slider-container {
+       display: flex;
+       gap: 30px;
+       overflow-x: auto;
+       scroll-behavior: smooth;
+       padding-bottom: 10px;
+       scrollbar-width: none;
+   }
+
+   .slider-container::-webkit-scrollbar {
+       display: none;
+   }
+
+   .selection-item {
+       min-width: 250px;
+       flex-shrink: 0;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       transition: transform 0.3s, box-shadow 0.3s;
+       border-radius: 20px;
+   }
+
+   .selection-item a {
+       color: #000
+       
+   }
+
+   .selection-item:hover {
+       transform: scale(1.05);
+       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+   }
+
+   .selection-item img {
+       width: 100%;
+       max-width: 250px;
+       height: 150px;
+       border-radius: 15px;
+       object-fit: cover;
+   }
+
+   .selection-item span {
+       margin-top: 10px;
+       font-size: 20px;
+       font-weight: bold;
+   }
+
+   .arrow-btn {
+       position: absolute;
+       background-color: white;
+       border: none;
+       cursor: pointer;
+       padding: 10px;
+       border-radius: 8px;
+       /* شكل مربع بزوايا خفيفة */
+       font-size: 20px;
+       z-index: 10;
+       color: #333;
+       transition: background-color 0.3s, color 0.3s;
+   }
+
+   .arrow-btn:hover,
+   .arrow-btn:active {
+       background-color: #ffd700;
+       color: white;
+   }
+
+
+   .arrow-left {
+       left: 10px;
+   }
+
+   .arrow-right {
+       right: 10px;
+   }
+
+
+   .full-width-box.offers-section {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       text-align: center;
+       position: relative;
+   }
+
+   .full-width-box.offers-section .arrow-btn {
+       top: 55%;
+       transform: translateY(-50%);
+   }
+
+
+
+
+   button.buy-now {
+       background-color: #ffd700;
+       color: #000;
+       border: none;
+       padding: 10px 20px;
+       border-radius: 25px;
+       cursor: pointer;
+       font-weight: bold;
+       margin-top: 10px;
+       transition: background-color 0.3s;
+   }
+
+   button.buy-now:hover {
+       background-color: #e6c200;
+   }
+
+   @media (max-width: 900px) {
+       .content-box {
+           flex-direction: column;
+           padding: 20px;
+       }
+
+       .search-box {
+           width: 250px;
+       }
+   }
+
+   @media (max-width: 600px) {
+       .search-box {
+           width: 180px;
+       }
+   }
+
+
+   .our-beans-section {
+       display: flex;
+       justify-content: space-between;
+       align-items: flex-start;
+       background-color: #ffffff;
+       padding: 60px 5vw;
+       gap: 40px;
+       flex-wrap: wrap;
+   }
+
+   .beans-text {
+       flex: 1;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       /* توسيط عمودي */
+       align-items: flex-start;
+       /* محاذاة لليسار */
+       max-width: 500px;
+       /* لتحديد عرض مناسب */
+       padding: 20px;
+   }
+
+   .beans-text h2 {
+       font-size: 32px;
+       font-weight: bold;
+       color: #3e2d23;
+       margin-bottom: 15px;
+   }
+
+   .beans-text p {
+       font-size: 18px;
+       line-height: 1.6;
+       color: #555;
+   }
+
+   .beans-products {
+       flex: 1;
+       display: flex;
+       flex-direction: row;
+       gap: 30px;
+       align-items: center;
+   }
+
+   .product-card {
+       background-color: #f1f1f1;
+       border-radius: 20px;
+       padding: 20px;
+       width: 300px;
+       text-align: center;
+       transition: transform 0.3s, box-shadow 0.3s;
+   }
+
+   .product-card:hover {
+       transform: scale(1.05);
+       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+   }
+
+   .product-card img {
+       width: 100%;
+       height: auto;
+       border-radius: 12px;
+       margin-bottom: 15px;
+   }
+
+   .product-card h3 {
+       font-size: 22px;
+       color: #3e2d23;
+       margin-bottom: 10px;
+   }
+
+   .product-card p {
+       font-size: 14px;
+       color: #666;
+       margin-bottom: 10px;
+       line-height: 1.5;
+   }
+
+   .product-card .price {
+       font-size: 16px;
+       font-weight: bold;
+       color: #8a6d3b;
+   }
+
+   .beans-divider {
+       border: none;
+       height: 2px;
+       background-color: #0000000e;
+       /* لون الخط */
+       width: 100vw;
+       /* عرض كامل الشاشة */
+       position: relative;
+       left: 50%;
+       right: 50%;
+       margin-left: -50vw;
+       /* لتوسيط الخط بعرض الشاشة بالكامل */
+       margin-right: -50vw;
+       margin-top: 00px;
+       margin-bottom: 40px;
+   }
+
+   .full-width-box.our-selection {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       text-align: center;
+   }

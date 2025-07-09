@@ -1,0 +1,414 @@
+ /* * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ } */
+
+ body {
+     font-family: Arial, sans-serif;
+     background-image: url('assets/background.png');
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+     color: #fff;
+ }
+
+
+ .hero-banner {
+     position: relative;
+     width: 100%;
+     height: 300px;
+     overflow: hidden;
+     margin-bottom: 30px;
+ }
+
+ .hero-banner img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+ }
+
+ .hero-banner .overlay {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background-color: rgba(0, 0, 0, 0.3);
+     z-index: 1;
+ }
+
+ .banner-text {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     text-align: center;
+     color: white;
+     z-index: 2;
+     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+ }
+
+ .banner-text h1 {
+     font-size: 36px;
+     margin-bottom: 10px;
+ }
+
+ .banner-text p {
+     font-size: 18px;
+ }
+
+ /* Dropdown Filter Bar */
+ .filter-bar {
+     background-color: rgba(0, 0, 0, 0.3);
+     border-radius: 10px;
+     margin: 20px auto;
+     padding: 20px;
+ }
+
+ .form-group {
+     min-width: 180px;
+ }
+
+ .form-select {
+     border-radius: 8px;
+     padding: 8px;
+     border: 1px solid #ccc;
+ }
+
+ /* Icons Section */
+ .icon-buttons {
+     display: flex;
+     gap: 10px;
+     width: 50%;
+     /* نصف عرض الصفحة */
+     margin: 0 auto;
+     /* مركزة أفقياً */
+     padding: 10px 0;
+     justify-content: center;
+     /* توزيع الأزرار بالتساوي في منتصف العنصر */
+ }
+
+
+ .icon-button {
+     padding: 8px 18px;
+     border: 1px solid #ccc;
+     background-color: white;
+     color: #333;
+     border-radius: 4px;
+     cursor: pointer;
+     font-size: 14px;
+     transition: background-color 0.3s ease, color 0.3s ease;
+ }
+
+ .icon-button.active {
+     background-color: #FFA500;
+     /* لون برتقالي يشبه اللون في الصورة */
+     border-color: #FFA500;
+     color: white;
+ }
+
+ .icon-button:hover {
+     background-color: #f0f0f0;
+ }
+
+ .icon-button:hover {
+     transform: translateY(-5px);
+     background-color: rgba(255, 255, 255, 0.35);
+ }
+
+ .icon-button.hot {
+     background-color: #FFD700;
+     color: #222;
+ }
+
+ .icon-label {
+     text-align: center;
+     font-size: 13px;
+     margin-top: 5px;
+ }
+
+ .menu-grid {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+     gap: 20px;
+     padding: 20px;
+ }
+
+ .menu-item {
+     background-color: rgba(255, 255, 255, 0.9);
+     border-radius: 16px;
+     overflow: hidden;
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+     transition: transform 0.3s ease;
+     text-align: center;
+     padding-bottom: 15px;
+     color: #333;
+ }
+
+ .menu-item a{
+
+     color: #333;
+ }
+
+
+ .menu-item:hover {
+     transform: translateY(-5px);
+ }
+
+ .menu-item img {
+     width: 100%;
+     height: 120px;
+     object-fit: cover;
+ }
+
+ .menu-item h3 {
+     margin: 10px 0 5px;
+     font-size: 14px;
+     font-weight: bold;
+ }
+
+ .menu-item .calories {
+     font-size: 11px;
+     color: #888;
+     margin-bottom: 8px;
+ }
+
+ .menu-item .price {
+     display: inline-block;
+     background-color: #531f84;
+     color: white;
+     padding: 6px 14px;
+     border-radius: 20px;
+     font-size: 13px;
+     font-weight: bold;
+ }
+
+ .dropdown-filter {
+     position: relative;
+ }
+
+ .filter-dropdown {
+     width: 100%;
+     max-height: 400px;
+     overflow-y: auto;
+     border-radius: 10px;
+ }
+
+ .dropdown-filter .dropdown-toggle {
+     min-width: 100%;
+ }
+
+ .filter-dropdown label,
+ .filter-dropdown select {
+     font-size: 14px;
+ }
+
+ .filter-panel {
+     background-color: rgba(255, 255, 255, 0.95);
+     border-radius: 10px;
+     padding: 20px;
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+     color: #333;
+ }
+
+
+ /* تصميم الكارد مربع */
+ .menu-item1 {
+     background-color: rgba(255, 255, 255, 0.9);
+     border-radius: 16px;
+     overflow: hidden;
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+     transition: transform 0.3s ease;
+     text-align: center;
+     padding: 15px;
+     color: #333;
+
+     /* ✅ استبدال aspect-ratio */
+     width: 220px;
+     min-height: 320px;
+     /* ضمان عرض المحتوى بشكل مريح */
+
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+ }
+
+
+ .menu-item1 img {
+     width: 100%;
+     max-height: 50%;
+     object-fit: cover;
+     border-radius: 16px 16px 0 0;
+     margin-bottom: 10px;
+ }
+
+ .menu-item1 h3 {
+     margin: 0;
+     font-size: 18px;
+     font-weight: bold;
+ }
+
+ .menu-item1 p {
+     font-size: 14px;
+     margin: 30px 0;
+     flex-grow: 1;
+ }
+
+ .menu-item1 .price {
+     display: inline-block;
+     background-color: #531f84;
+     color: white;
+     padding: 6px 14px;
+     border-radius: 20px;
+     font-size: 14px;
+     font-weight: bold;
+     margin-top: 10px;
+     align-self: center;
+ }
+
+ /* مربع من نحن */
+ .about-box {
+     min-height: 180px;
+     color: #333;
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+ .our-beans-section {
+     display: flex;
+     justify-content: center;
+     align-items: flex-start;
+     background-color: #ffffff;
+     padding: 60px 5vw;
+     gap: 10px;
+     flex-wrap: wrap;
+ }
+
+ .beans-text {
+     flex: 1;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: flex-start;
+     max-width: 450px;
+     padding: 10px;
+ }
+
+ .beans-text h2 {
+     font-size: 32px;
+     font-weight: bold;
+     color: #3e2d23;
+     margin-bottom: 15px;
+ }
+
+ .beans-text p {
+     font-size: 18px;
+     line-height: 1.6;
+     color: #555;
+ }
+
+ .beans-products {
+     flex: 1;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     /* ✅ لتوسيط العناصر أفقياً */
+     gap: 30px;
+     padding-top: 20px;
+ }
+
+ .product-card {
+     background-color: #f1f1f1;
+     border-radius: 20px;
+     padding: 20px;
+     width: 300px;
+     height: 450px;
+     /* ✅ ارتفاع ثابت */
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     text-align: center;
+     transition: transform 0.3s, box-shadow 0.3s;
+ }
+
+ .product-card:hover {
+     transform: scale(1.05);
+     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+ }
+
+ .product-card img {
+     width: 100%;
+     height: 180px;
+     /* ✅ ارتفاع ثابت */
+     object-fit: cover;
+     /* ✅ تقطيع لتناسب البوكس */
+     border-radius: 12px;
+     margin-bottom: 15px;
+ }
+
+ .product-card h3 {
+     font-size: 22px;
+     color: #3e2d23;
+     margin-bottom: 10px;
+ }
+
+ .product-card p {
+     font-size: 14px;
+     color: #666;
+     margin-bottom: 10px;
+     line-height: 1.5;
+ }
+
+ .product-card .price {
+     font-size: 16px;
+     font-weight: bold;
+     color: #8a6d3b;
+ }
+
+ .beans-divider {
+     border: none;
+     height: 2px;
+     background-color: #0000000e;
+     /* لون الخط */
+     width: 100vw;
+     /* عرض كامل الشاشة */
+     position: relative;
+     left: 50%;
+     right: 50%;
+     margin-left: -50vw;
+     /* لتوسيط الخط بعرض الشاشة بالكامل */
+     margin-right: -50vw;
+     margin-top: 00px;
+     margin-bottom: 40px;
+ }
+
+ .full-width-box.our-selection {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     text-align: center;
+ }
+
+
+
+
+
+ /* .about-box {
+  border: 2px solid #531f84;
+  min-height: 180px;
+}
+
+.card img {
+  height: 180px;
+  object-fit: cover;
+} */

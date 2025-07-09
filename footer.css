@@ -1,0 +1,8 @@
+    .footer {
+        text-align: center;
+        padding: 20px;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.6);
+        /* خلفية غامقة شفافة */
+        font-size: 14px;
+    }
