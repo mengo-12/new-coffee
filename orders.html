@@ -12,8 +12,8 @@
     integrity="sha384-JZJq+M76c2F3L+kOaWb4DshNBF28nE1y/9gkEo84+2EAtVx5yCw5YB0U4BKnPhHD" crossorigin="anonymous">
 
   <link rel="stylesheet" href="orders.css">
-  <link rel="stylesheet" href="header.css">
-  <link rel="stylesheet" href="footer.css">
+  <!-- <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="footer.css"> -->
 
 
 </head>
@@ -21,7 +21,18 @@
 <body>
 
   <!-- Header -->
-  <header id="header-placeholder"></header>
+    <header>
+    <div class="left-group">
+      <div class="search-box">
+        <input type="text" placeholder="Search" />
+        <i class="fas fa-search"></i>
+      </div>
+      <div class="buttons">
+        <!-- يمكن إضافة أزرار إضافية هنا -->
+      </div>
+    </div>
+    <img src="assets/logo.png.png" alt="Logo" class="logo" />
+  </header>
 
 
   <!-- Order Section -->
@@ -95,11 +106,14 @@
         <button>Place Order</button>
       </div>
     </div>
+  </div>
+    
+    
 
-    <footer id="footer-placeholder"></footer>
 
-
-
+<footer class="footer">
+    <p>&copy; 2025 Darat AlQahwa. All rights reserved.</p>
+</footer>
 
     <script>
       function setupToggle(groupId) {
@@ -118,23 +132,6 @@
       setupToggle("delivery-method");
     </script>
 
-
-    <script>
-      fetch("header.html")
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById("header-placeholder").innerHTML = data;
-        });
-    </script>
-
-    <script>
-      fetch("footer.html")
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById("footer-placeholder").innerHTML = data;
-        });
-    </script>
-  </div>
 </body>
 
 </html>

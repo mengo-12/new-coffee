@@ -13,9 +13,9 @@
     integrity="sha384-JZJq+M76c2F3L+kOaWb4DshNBF28nE1y/9gkEo84+2EAtVx5yCw5YB0U4BKnPhHD" crossorigin="anonymous">
 
 
-  <link rel="stylesheet" href="header.css">
+  <!-- <link rel="stylesheet" href="header.css"> -->
   <link rel="stylesheet" href="coffee.css">
-  <link rel="stylesheet" href="footer.css">
+  <!-- <link rel="stylesheet" href="footer.css"> -->
 
 
 
@@ -26,7 +26,18 @@
 </head>
 
 <body>
-  <header id="header-placeholder"></header>
+    <header>
+    <div class="left-group">
+      <div class="search-box">
+        <input type="text" placeholder="Search" />
+        <i class="fas fa-search"></i>
+      </div>
+      <div class="buttons">
+        <!-- يمكن إضافة أزرار إضافية هنا -->
+      </div>
+    </div>
+    <img src="assets/logo.png.png" alt="Logo" class="logo" />
+  </header>
 
   <div class="container">
     <div class="breadcrumb">
@@ -94,25 +105,9 @@
 
 
   </div>
-  <footer id="footer-placeholder"></footer>
-
-
-
-  <script>
-    fetch("header.html")
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById("header-placeholder").innerHTML = data;
-      });
-  </script>
-
-  <script>
-    fetch("footer.html")
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById("footer-placeholder").innerHTML = data;
-      });
-  </script>
+  <footer class="footer">
+    <p>&copy; 2025 Darat AlQahwa. All rights reserved.</p>
+</footer>
 
 </body>
 
